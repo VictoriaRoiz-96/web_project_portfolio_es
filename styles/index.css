@@ -33,3 +33,138 @@
   font-weight: 600;
   font-style: normal;
 }
+
+:root {
+  --color-background: #111111;
+  --color-text: #ffffff;
+  --accent-color: #6d6dff;
+  --linear-gradient: linear-gradient(90deg, #4c1a97 0%, #6d6dff 100%);
+  --font-primary: "Archivo Black", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+  --h1-font-size: 72px;
+  --h2-font-size: 40px;
+  --h3-font-size: 24px;
+  --line-height-headings: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  padding-left: 120px;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--h1-font-size);
+  line-height: var(--line-height-headings);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: var(--h2-font-size);
+  line-height: var(--line-height-headings);
+}
+
+h3 {
+  font-family: var(--font-secondary);
+  font-size: var(--h3-font-size);
+  line-height: var(--line-height-headings);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 40px;
+  padding-left: 120px;
+  gap: 20px;
+}
+
+.header__subtitle {
+  color: #ffffff80;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 120px;
+}
+
+.profile-picture {
+  width: 387px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.portfolio__actions {
+  display: flex;
+  gap: 30px;
+}
+
+.skills {
+  padding-bottom: 100px;
+}
+
+.skills__icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 180px;
+}
+
+.projects {
+  padding-right: 120px;
+  padding-bottom: 100px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1c1c1c;
+}
+
+.project-card__image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.project-card__image {
+  position: relative;
+}
+
+.project-card__body {
+  padding: 30px;
+}
+
+.project-card__techs {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}

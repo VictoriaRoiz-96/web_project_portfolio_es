@@ -121,6 +121,10 @@ a {
   gap: 30px;
 }
 
+.portfolio__actions:hover {
+  color: #ffffff50;
+}
+
 .skills {
   padding-bottom: 100px;
 }
@@ -160,6 +164,17 @@ a {
   position: relative;
 }
 
+.project-card__image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
 .project-card__body {
   padding: 30px;
 }
@@ -170,10 +185,42 @@ a {
   left: 10px;
   display: flex;
   gap: 10px;
+  z-index: 2;
 }
 
 .footer {
-  padding-bottom: 100px;
+  padding: 60px 0;
+  position: relative;
+}
+
+.footer::before {
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  background-color: #131385;
+  filter: blur(150px);
+  left: calc(50% - 500px); /* Centra el círculo de fondo */
+  z-index: -1;
+}
+
+.footer::after {
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  background-color: #131385;
+  filter: blur(100px);
+  left: calc(
+    50% + 200px
+  ); /* Posiciona el segundo círculo a la derecha del primero */
+  z-index: -1;
 }
 
 .footer__content {
@@ -181,10 +228,20 @@ a {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__social {
   display: flex;
   gap: 80px;
   margin-top: 30px;
+}
+
+.footer__link {
+  color: #6d6dff;
+}
+
+.footer__link:hover {
+  color: #6d6dff50;
 }

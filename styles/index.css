@@ -98,6 +98,7 @@ a {
   gap: 40px;
   padding-left: 8%;
   padding-right: 8%;
+  position: relative;
 }
 
 .header::before {
@@ -137,8 +138,17 @@ a {
   gap: 30px;
 }
 
-.portfolio__actions:hover {
+.portfolio__actions a:hover {
   color: #d6f04a;
+}
+
+.portfolio__actions a {
+  background-image: linear-gradient(90deg, #d6f04a, #778818, #394302);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 8px;
+  display: inline-block;
 }
 
 .skills {
@@ -161,6 +171,7 @@ a {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .project-card {
@@ -168,12 +179,16 @@ a {
   overflow: hidden;
   background-color: #1c1c1c;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card__image img {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+  height: 100%;
 }
 
 .project-card__image {
@@ -193,6 +208,9 @@ a {
 
 .project-card__body {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card__techs {
@@ -202,6 +220,24 @@ a {
   display: flex;
   gap: 10px;
   z-index: 2;
+}
+
+.project-card__icons {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.project-card__icons a:hover {
+  opacity: 0.7;
+}
+
+.project-card__body h3 {
+  margin-bottom: 5px;
+}
+
+.project-card__body p {
+  margin-top: 10px;
 }
 
 .footer {
@@ -260,4 +296,8 @@ a {
 
 .footer__link:hover {
   color: #d6f04a;
+}
+
+.footer__social a:hover {
+  opacity: 0.7;
 }
